@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal</title>
+    <link rel="stylesheet" href="mood.css">
+    <link rel="stylesheet" href="game.js">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Mood Journal</h1>
+        <form id="mood-form">
+            <input type="date" id="date" required>
+            <select id="mood">
+                <option value="happy">😊 Happy</option>
+                <option value="sad">😢 Sad</option>
+                <option value="anxious">😰 Anxious</option>
+                <option value="neutral">😐 Neutral</option>
+            </select>
+            <textarea id="reflection" placeholder="Write your thoughts..." required></textarea>
+            <button type="submit">Log Mood</button>
+        </form>
+        <canvas id="moodChart"></canvas>
+        <div id="entries"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support</title>
+    <link rel="stylesheet" href="minor.css">
+    <link rel="stylesheet" href="breathe.html">
+    <link rel="stylesheet" href="journl.html">
+    <link rel="stylesheet" href="mind.html">
+    <link rel="stylesheet" href="stress.html">
+    <link rel="stylesheet" href="guided.html">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="game.js">
+    <link rel="stylesheet" href="affirm.js">
+    <link rel="stylesheet" href="ball.js">
+    <link rel="stylesheet" href="jou.js">
+    <link rel="stylesheet" href="login.html">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Mental Health Support</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="mood.html">Mood Journal</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+         <div class="bg"><img src="main.png" width="1500px" alt=""></div>
+         <div class="contain">
+            <h1>Aesthetic Mood Journal</h1>
+            <form id="mood-form">
+                <label for="mood">How are you feeling today?</label>
+                <select id="mood">
+                    <option value="happy">😊 Happy</option>
+                    <option value="sad">😢 Sad</option>
+                    <option value="neutral">😐 Neutral</option>
+                    <option value="anxious">😟 Anxious</option>
+                    <option value="excited">😃 Excited</option>
+                </select>
+                <textarea id="note" placeholder="Write your thoughts here..." required></textarea>
+                <button type="submit">Save Mood</button>
+            </form>
+            <div id="journal-entries"></div>
+        </div>
+        <script src="jou.js"></script>
+      
+        <div class="hero">
+            <div class="hero-content">
+               <img src="finaltren.png" alt=""><br>
+                <br><a href="#resources" class="btn-primary">Explore Resources</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<section id="resources">
+    <div class="container">
+        <h2>Mental Health Resources</h2>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <a href=#container><h3>Self-Help Tools</h3></a>
+                <p>Access a range of tools designed to help manage stress and anxiety.</p>
+            </div>
+            <div class="resource-card">
+                <a href="guided.html"><h3>Guided Meditation</h3></a>
+                <p>Listen to guided meditations to help with relaxation and mindfulness.</p>
+            </div>
+            <div class="resource-card">
+                <a href="article.html"><h3>Articles & Blog</h3></a>
+                <p>Read articles and blog posts about mental health topics and personal stories.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="support">
+    <div class="container">
+        <h2>Support Options</h2>
+        <div class="support-grid">
+            <div class="support-item">
+               <a href="counselling.html"> <h3>Online Counseling</h3></a>
+                <p>Connect with licensed therapists for online counseling sessions.</p>
+            </div>
+            <div class="support-item">
+                <h3>Support Groups</h3>
+                <p>Join support groups to share experiences and get support from others.</p>
+            </div>
+            <div class="support-item">
+                <a href="emergency.html"><h3>Emergency Help</h3></a>
+                <p>Find immediate help and crisis intervention resources in case of emergencies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="gameo">
+    <div class="affirm"><h2>Repeat the Affirmation</h2></div>
+    <div id="affirmation"></div>
+    <div class="buu"><button id="new-affirmation-button">Get New Affirmation</button></div>
+    <div id="result" class="hidden"></div>
+    <script src="affirm.js"></script>
+</section>
+
+    
+
+  
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="ss2.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="ss3.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="ss4.jpg" alt="Slide 3"></div>
+            <div class="slide"><img src="ss5.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="ss6.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="ss7.jpg" alt="Slide 3"></div>
+
+          
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="containerr">
+        <div class="balls"><h1>Stress Relief Game</h1></div>
+        <div id="game-area"></div>
+       <div class="ball"><button id="start-button">Start Game</button></div> 
+        <p id="score">Score: 0</p>
+    </div>
+    <script src="ball.js"></script>
+  
+
+        <section id="self-help-tools">
+            <div class="container">
+                <h2>Self-Help Tools</h2>
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <h3>Stress Management Apps</h3>
+                        <p>Explore apps designed to help you manage stress through guided exercises, reminders, and progress tracking.</p>
+                        <a href="stress.html" class="btn-secondary">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Breathing Exercises</h3>
+                        <p>Practice breathing techniques that can help calm your mind and reduce anxiety in moments of stress.</p>
+                        <a href="breathe.html" class="btn-secondary">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Journaling Prompts</h3>
+                        <p>Use journaling prompts to reflect on your thoughts and feelings, which can help in managing your mental health.</p>
+                        <a href="journl.html" class="btn-secondary">Learn More</a>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Mindfulness Exercises</h3>
+                        <p>Engage in mindfulness exercises that promote relaxation and help you stay present in the moment.</p>
+                        <a href="mind.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <img class="fam" src="family.png" width="1200px" height="550px" alt="">
+        
+        <section id="game">
+           <div class="gamii"> <h1>Deep Breathing Exercise</h1></div>
+            <div id="breath-indicator">
+                <div class="circle" id="inhale">Inhale</div>
+                <div class="circle" id="hold">Hold</div>
+                <div class="circle" id="exhale">Exhale</div>
+            </div>
+           <div class="butt"> <button id="start-button">Start Breathing Exercise</button></div>
+            <script src="modal.js"></script>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>What People Say</h2>
+                <div class="testimonial-carousel">
+                    <div class="testimonial-item">
+                        <p>"The resources provided have been incredibly helpful in managing my anxiety. Thank you!"</p>
+                        <p><strong>Sarah Lee</strong></p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"The online counseling services have made a huge difference in my mental health journey."</p>
+                        <p><strong>David Kim</strong></p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"I found the support groups to be a great way to connect with others who understand what I'm going through."</p>
+                        <p><strong>Emily Davis</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mental Health Support. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

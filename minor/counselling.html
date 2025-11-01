@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Counseling - Mental Health Support</title>
+    <link rel="stylesheet" href="counsel.css">
+</head>
+<body>
+    <header>
+        <h1>Online Counseling</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Individual Counseling</h3>
+                <p>One-on-one sessions with a licensed counselor to help you manage stress, anxiety, depression, and other mental health challenges.</p>
+            </div>
+            <div class="service">
+                <h3>Couples Counseling</h3>
+                <p>Support for couples to improve communication, resolve conflicts, and strengthen relationships.</p>
+            </div>
+            <div class="service">
+                <h3>Group Therapy</h3>
+                <p>Participate in group sessions to gain support from peers and share experiences in a guided environment.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a team of dedicated mental health professionals committed to providing high-quality counseling services. Our goal is to support you through your mental health journey with compassion and expertise.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Counseling. All rights reserved.</p>
+    </footer>
+</body>
+</html>

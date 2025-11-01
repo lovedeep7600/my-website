@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercises for Mental Health</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .exercise {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .exercise:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: #6e8efb;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .breathing-animation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        
+        .animation-container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            transition: all 4s ease-in-out;
+            box-shadow: 0 0 20px rgba(110, 142, 251, 0.3);
+        }
+        
+        .breathing-instructions {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #6e8efb;
+            min-height: 2rem;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        button {
+            background: #6e8efb;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background: #5a7dfa;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .animation-container {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Breathing Exercises for Mental Health</h1>
+        <p>Simple exercises to help you relax and focus</p>
+    </header>
+    <main>
+        <section class="exercise">
+            <h2>Box Breathing</h2>
+            <p>Inhale for 4 seconds, hold for 4 seconds, exhale for 4 seconds, and hold again for 4 seconds. Repeat this cycle 3-5 times.</p>
+            
+            <div class="breathing-animation">
+                <div class="animation-container">
+                    <div class="circle" id="breathing-circle">Breathe In</div>
+                </div>
+                <div class="breathing-instructions" id="instructions">Breathe In</div>
+                <div class="controls">
+                    <button id="start-btn">Start Breathing</button>
+                    <button id="reset-btn">Reset</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="exercise">
+            <h2>4-7-8 Breathing</h2>
+            <p>Inhale through your nose for 4 seconds, hold your breath for 7 seconds, and exhale through your mouth for 8 seconds. Repeat this cycle 3-4 times.</p>
+        </section>
+        
+        <section class="exercise">
+            <h2>Diaphragmatic Breathing</h2>
+            <p>Place one hand on your chest and the other on your belly. Breathe in deeply through your nose, ensuring that your belly rises more than your chest. Exhale slowly through your mouth. Repeat for 5 minutes.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Breathing Exercises</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const circle = document.getElementById('breathing-circle');
+            const instructions = document.getElementById('instructions');
+            const startBtn = document.getElementById('start-btn');
+            const resetBtn = document.getElementById('reset-btn');
+            
+            let isAnimating = false;
+            let animationInterval;
+            
+            // Box breathing sequence: Inhale (4s) -> Hold (4s) -> Exhale (4s) -> Hold (4s)
+            const phases = [
+                { text: "Breathe In", duration: 4000, scale: 1.5 },
+                { text: "Hold", duration: 4000, scale: 1.5 },
+                { text: "Breathe Out", duration: 4000, scale: 1 },
+                { text: "Hold", duration: 4000, scale: 1 }
+            ];
+            
+            function startBreathing() {
+                if (isAnimating) return;
+                
+                isAnimating = true;
+                startBtn.textContent = "Pause";
+                
+                let phaseIndex = 0;
+                
+                function animatePhase() {
+                    if (!isAnimating) return;
+                    
+                    const phase = phases[phaseIndex];
+                    
+                    // Update text
+                    circle.textContent = phase.text;
+                    instructions.textContent = phase.text;
+                    
+                    // Animate circle
+                    circle.style.transform = `scale(${phase.scale})`;
+                    circle.style.transition = `all ${phase.duration/1000}s ease-in-out`;
+                    
+                    // Move to next phase after duration
+                    setTimeout(() => {
+                        phaseIndex = (phaseIndex + 1) % phases.length;
+                        animatePhase();
+                    }, phase.duration);
+                }
+                
+                animatePhase();
+            }
+            
+            function stopBreathing() {
+                isAnimating = false;
+                startBtn.textContent = "Start Breathing";
+                circle.style.transform = "scale(1)";
+                circle.style.transition = "all 0.5s ease";
+                circle.textContent = "Breathe In";
+                instructions.textContent = "Breathe In";
+            }
+            
+            startBtn.addEventListener('click', function() {
+                if (isAnimating) {
+                    stopBreathing();
+                } else {
+                    startBreathing();
+                }
+            });
+            
+            resetBtn.addEventListener('click', stopBreathing);
+        });
+    </script>
+</body>
+</html>

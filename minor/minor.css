@@ -1,0 +1,627 @@
+
+body, h1,  p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    padding: 2.rem;
+    box-sizing: border-box;
+    color: #EA9276;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    margin-top: 50px;
+}
+h3 {
+   color: chocolate;
+   text-decoration: none;
+   font-family: 'Times New Roman', Times, serif;
+} 
+h2 {
+    color: #712020;
+   
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.support-item a{
+    text-decoration: none;
+
+}
+.resource-card a{
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.bg{
+    margin-bottom: 0%;
+    padding: 0%;
+    margin-left: 00px;
+
+    
+}
+.bg img {
+ 
+padding: 0%;
+    margin-bottom: 0%;
+
+}
+
+
+header {
+    position: relative;
+    color: #fff;
+}
+
+nav {
+    background: white;
+    color: #EA9276;
+  margin-bottom: 0px;
+    justify-content: center;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 50px;
+    justify-content: center;
+    margin-left: 380px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 3rem;
+}
+
+nav ul li a {
+    color: #A60E13;
+    text-decoration: none;
+    font-size: 1rem;
+    font-display: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-background.jpg') no-repeat center center/cover;
+    color:#712020;
+  
+    text-align: center;
+    margin-top: 0%;
+}
+
+.hero-content {
+    max-width: 1500px;   
+}
+.hero img{
+    width: 1300px;
+    margin-left: 80px;
+    margin-top: 0%;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: chocolate;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.resource-grid, .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card, .support-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover, .support-item:hover {
+    transform: scale(1.05);
+    background-color: rgb(255, 238, 208);
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-item {
+    min-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-item p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: chocolate;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .resource-grid, .support-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Self-Help Tools Section */
+#self-help-tools {
+    background: #f9f9f9;
+    padding: 2rem 0;
+}
+
+#self-help-tools h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tool-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px white;
+}
+
+.tool-card h3 {
+    margin-bottom: 0.5rem;
+    color: #712020;
+}
+
+.tool-card p {
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    background: chocolate;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 80%;
+    height: 550px;
+    display: block;
+    margin-left: 150px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.video-container {
+    width: 100%; /* Adjust as needed */
+    max-width: 1500px; /* Maximum width */
+}
+
+video {
+    width: 100%; /* Makes the video responsive */
+    /* Optional: border around the video */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+.game-card {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.02);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1565c0;
+}
+.fam {
+    margin-left: 160px;
+}
+
+
+
+
+
+#breath-indicator {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+#inhale {
+    background-color: #4caf50;
+}
+
+#hold {
+    background-color: #ff9800;
+}
+
+#exhale {
+    background-color: #f44336;
+}
+.gamii{
+    justify-content: center;
+    background-color: #EA9276;
+    color: white;
+}
+.gamii h1{
+    color: white;
+    margin-left: 640px;
+}
+.butt{
+    background-color: #EA9276;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 0%;
+    justify-content: center;
+    margin-left: 640px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #EA9276;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+   
+}
+
+button:hover {
+    background-color: #712020;
+}
+
+#affirmation {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color:#712020;
+    padding: 20px;
+    border: 2px solid wheat;
+    border-radius: 8px;
+}
+
+button {
+   
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color:#EA9276;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 640px;
+}
+.buu{
+    background-color: #EA9276;
+}
+
+button:hover {
+    background-color:#c37861;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    color:chocolate;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 605px;
+    font-weight: bold;
+}
+.affirm{
+    background-color: #EA9276;
+    justify-content: center;
+    
+}
+.affirm h2{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 640px;
+}
+.containerr {
+    text-align: center;
+}
+
+#game-area {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border: 2px dashed chocolate;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.stress-ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff5252;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.stress-ball:hover {
+    transform: scale(1.1);
+}
+
+.stress button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color:#EA9276;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 640px;
+}
+
+button:hover {
+    background-color: #c37861;
+}
+
+#score {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.ball{
+    background-color: #EA9276;
+    
+}
+.balls{
+    background-color: #EA9276;
+    margin-top: 20px;
+}
+.balls h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contain {
+    background: linear-gradient(145deg, #ffffff, white);
+    border-radius: 15px;
+    box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+    padding: 20px;
+    width: 100%;
+   
+}
+
+
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+select {
+    background-color: #ffe0e0;
+}
+
+textarea {
+    background-color: #ffe6e6;
+    resize: none;
+}
+
+button {
+    background-color: #EA9276;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: chocolate;
+}
+
+#journal-entries {
+    margin-top: 20px;
+}
+
+.entry {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
